@@ -1,0 +1,24 @@
+section{
+    border: solid rgb(110, 35, 35) 2px;
+}
+
+.back{
+    color:rgba(243, 9, 9, 0.671);
+    margin: 10px 0 305px 0;
+}
+
+.btc{
+    color:rgba(243, 9, 9, 0.671);
+    font-size: 30px;
+    margin: 30px 0 30px 0;
+    font-weight: bold;
+}
+
+button{
+    background-color: lightgray
+}
+
+.nav-caption{
+    display: inline-block;
+    padding-left: 6px;
+}

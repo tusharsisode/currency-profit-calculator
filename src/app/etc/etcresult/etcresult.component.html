@@ -1,0 +1,31 @@
+<div *ngIf="showResults">
+  <section fxLayout="column wrap">
+    <div fxFlexAlign="center">
+      <h1 class="etc">ETC PROFIT DETAILS</h1>
+    </div>
+    <div fxFlexAlign="center">
+      <h3 class="date">{{date | date:'dd-MMM-yy'}}</h3>
+    </div>
+    <mat-grid-list cols="2" rowHeight="10:1" class="header">
+      <mat-grid-tile>BUY</mat-grid-tile>
+      <mat-grid-tile>SELL</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="2" rowHeight="10:1" class="result">
+      <mat-grid-tile>${{buyPrice}}</mat-grid-tile>
+      <mat-grid-tile>${{sellPrice}}</mat-grid-tile>
+      <mat-grid-tile>{{buyTime}}</mat-grid-tile>
+      <mat-grid-tile>{{sellTime}}</mat-grid-tile>
+    </mat-grid-list>
+    <div class="profit" fxFlexAlign="center">
+      <h2>PROFIT: ${{profit | number : '1.2-2'}}</h2>
+    </div>
+    <div class="back" fxFlexAlign="center">
+      <button mat-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> <span class="nav-caption">Back</span>
+      </button>
+    </div>
+  </section>
+</div>
+<div *ngIf="!showResults">
+  <app-data-not-found></app-data-not-found>
+</div>

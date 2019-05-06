@@ -1,0 +1,16 @@
+p{
+    color: black;
+    font-size: 20px;
+    margin: 400px 450px 450px 0;
+    font-weight: bold;
+}
+
+section{
+    background-image: url(../../assets/bg.jpg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+}
+

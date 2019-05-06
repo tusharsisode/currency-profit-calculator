@@ -1,0 +1,20 @@
+<section fxLayout="column wrap">
+  <div fxFlexAlign="center">
+    <h1 class="etc">ETC PROFIT DETAILS</h1>
+  </div>
+  <div fxFlexAlign="center">
+    <mat-form-field fxLayout="row" fxLayoutAlign="center">
+      <input matInput [matDatepicker]="picker" placeholder="Select Date" [(ngModel)]="date" disabled>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker disabled="false"></mat-datepicker>
+    </mat-form-field>
+    <div class="div_button" fxLayout="row" fxLayoutGap="20px">
+      <button mat-button [routerLink]="['/home']">
+        <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
+      </button>
+      <button mat-button [routerLink]="['/etc/results']" (click)="publishData()">
+        <mat-icon>arrow_forward</mat-icon> <span class="nav-caption">Get Profit</span>
+      </button>
+    </div>
+  </div>
+</section>
