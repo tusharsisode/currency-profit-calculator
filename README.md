@@ -1,54 +1,14 @@
-# NabCurrencyProfitCalculator frontend application built with Angular 7, Material and TypeScript and deployed on AWS Elastic Beanstalk
+# NabCurrencyProfitCalculator frontend application built with Angular 7, Material and TypeScript and deployed on AWS S3 and AWS Cloudfront
 
-This NabCurrencyProfitCalculator frontend application is built using Angular 7, Material and TypeScript. It uses the backend services configured in settings.ts to fetch and serve the data for BTC, ETC and LTC. It is deployed on AWS Elastic Beanstalk as a cloud solution. The backend services are also served from AWS cloud using AWS Elastic Beanstalk, AWS API Gateway and AWS Lambda. For testing purposes, steps are also given to run this application locally using Angular CLI.
+This NabCurrencyProfitCalculator frontend application is built using Angular 7, Material and TypeScript. It uses the backend services configured in src/app/settings.ts to fetch and serve the data for BTC, ETC and LTC. It is deployed as a cloud solution on AWS S3 behind AWS Cloudfront. The backend services are also served from AWS cloud using AWS Elastic Beanstalk, AWS API Gateway and AWS Lambda. For testing purposes, steps are also given to run this application locally using Angular CLI.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
-# Deploy to AWS Elastic Beanstalk
+# Deploy to AWS S3 and AWS Cloudfront
 
-Install and get the Elastic Beanstalk Command Line Interface (EB CLI) running by referring this link: https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
- 
-### Refer document Frontend_Deployed_To_AWS_EBS_Screenshots.docx for steps with screenshots.
+Please refer document App_deployment_AWS_S3_and_AWS_Cloudfront_Screenshots.docs given in the project root for detailed steps with screenshots to deploy the solution to AWS S3 and AWS Cloudfront. Alternatively, please access below cloudfront URL to directly access and test the application:
 
-Follow these steps for deploying to AWS Elastic Beanstalk:
-
-1. Build the cloned project using below cmd.
-    
-    ng build --prod
-
-2. Create server.js file inside dist folder created from above build and paste below content in that file:
-
-    const express = require('express');
-    const http = require('http');
-
-    const app = express();
-
-    const port = process.env.PORT || 8081;
-
-    app.use(express.static(__dirname));
-
-    const server = http.createServer(app);
-
-    server.listen(port, ()=> console.log("Running on port: " +port));
-    
-
-1. Go inside cloned project directory and execute below cmd. Keep default values or give values as you wish.
-	
-	eb init
-
-2. Create an environment by executing below cmd. 
-	
-	eb create nab-currency-profit-calculator
-	
-3. In case any changes are made, please commit the changes and then deploy / update the environment by executing below cmd. 
-	
-	eb deploy
- 
-4. Access the API using link like below.
-	
-	http://etc-service.tthmedhjhb.us-west-2.elasticbeanstalk.com/etc?inputDate=05/07/2019
-	
-5. EBS provisions all the required resources for running a node application in AWS. Go to AWS Console under Elastic Beanstalk service section and view the above created application.
+http://d3106i0h4fo7t9.cloudfront.net
 
 # Getting Started locally
 
