@@ -1,6 +1,10 @@
 # NabCurrencyProfitCalculator frontend application built with Angular 7, Material and TypeScript and deployed on AWS S3 and AWS Cloudfront
 
-This NabCurrencyProfitCalculator frontend application is built using Angular 7, Material and TypeScript. It uses the backend services configured in src/app/settings.ts to fetch and serve the data for BTC, ETC and LTC. It is deployed as a cloud solution on AWS S3 behind AWS Cloudfront. The backend services are also served from AWS cloud using AWS Elastic Beanstalk, AWS API Gateway and AWS Lambda. For testing purposes, steps are also given to run this application locally using Angular CLI.
+This NabCurrencyProfitCalculator front-end application is built using Angular 7, Material and TypeScript. It uses 3 backend micro-services viz. btc-service, etc-service and ltc-service, to fetch and serve the data for BTC, ETC and LTC respectively. The URLs for these services are configured in src/app/settings.ts file. It is deployed as a complete cloud solution serving static content from AWS S3 and hooked behind AWS Cloudfront content delivery network for faster performance. For testing purposes, steps are also given to run this application locally using Angular CLI.
+
+For directly accessing and testing the AWS deployed front-end application, please use below link. The UI is completely responsive and can be assessed seamlessly on either mobile, tab or desktop browser. The backend contains the data for three dates viz. 07-May-2019, 08-May-2019 and 09-May-2019. You may try searching for profit details by giving different dates accordingly for each of BTC, ETC and LTC tabs.
+
+http://d3106i0h4fo7t9.cloudfront.net
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
