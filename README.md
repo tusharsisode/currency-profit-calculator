@@ -10,9 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Deploy to AWS S3 and AWS Cloudfront
 
-Please refer document App_deployment_AWS_S3_and_AWS_Cloudfront_Screenshots.docs given in the project root for detailed steps with screenshots to deploy the solution to AWS S3 and AWS Cloudfront. Alternatively, please access below cloudfront URL to directly access and test the application:
-
-http://d3106i0h4fo7t9.cloudfront.net
+Please refer document App_deployment_AWS_S3_and_AWS_Cloudfront_Screenshots.docx given in the project root for detailed steps with screenshots to deploy the solution to AWS S3 and AWS Cloudfront.
 
 # Getting Started locally
 
