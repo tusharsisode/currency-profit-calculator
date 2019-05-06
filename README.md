@@ -12,13 +12,33 @@ Install and get the Elastic Beanstalk Command Line Interface (EB CLI) running by
 
 Follow these steps for deploying to AWS Elastic Beanstalk:
 
+1. Build the cloned project using below cmd.
+    
+    ng build --prod
+
+2. Create server.js file inside dist folder created from above build and paste below content in that file:
+
+    const express = require('express');
+    const http = require('http');
+
+    const app = express();
+
+    const port = process.env.PORT || 8081;
+
+    app.use(express.static(__dirname));
+
+    const server = http.createServer(app);
+
+    server.listen(port, ()=> console.log("Running on port: " +port));
+    
+
 1. Go inside cloned project directory and execute below cmd. Keep default values or give values as you wish.
 	
 	eb init
 
 2. Create an environment by executing below cmd. 
 	
-	eb create etc-service
+	eb create nab-currency-profit-calculator
 	
 3. In case any changes are made, please commit the changes and then deploy / update the environment by executing below cmd. 
 	
